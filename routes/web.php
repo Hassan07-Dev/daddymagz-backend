@@ -28,6 +28,10 @@ Route::get('/rollback', function(){
     Artisan::call('migrate:rollback');
 });
 
+Route::get('/adminseeder', function(){
+    Artisan::call('db:seed');
+});
+
 Route::controller (HomeController::class)->group (function (){
     Route::get ('/', 'index')->name ('home.index');
 });
