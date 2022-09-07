@@ -24,6 +24,10 @@ Route::get('/migrate', function(){
     Artisan::call('migrate', ['--force' => true]);
 });
 
+Route::get('/rollback', function(){
+    Artisan::call('migrate:rollback');
+});
+
 Route::controller (HomeController::class)->group (function (){
     Route::get ('/', 'index')->name ('home.index');
 });
