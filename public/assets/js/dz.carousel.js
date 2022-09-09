@@ -150,7 +150,7 @@ jQuery(document).ready(function() {
 		loop:true,
 		autoplay:true,
 		margin:40,
-		center:true,
+		// center:true,
 		stagePadding: 40,
 		nav:true,
 		autoplaySpeed: 1000,
@@ -173,7 +173,7 @@ jQuery(document).ready(function() {
 				items:2
 			},
 			1000:{
-				items:3,
+				items:4,
 			}
 		}
 	})

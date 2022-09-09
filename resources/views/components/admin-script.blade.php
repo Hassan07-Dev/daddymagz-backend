@@ -56,7 +56,7 @@
 <script src="{{ asset('plugins/jquery-validation/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('plugins/jquery-validation/additional-methods.min.js') }}"></script>
 
-<script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>
+<script src="{{ asset('plugins/select2/js/select2.min.js') }}"></script>
 
 <script src="{{ asset('plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js') }}"></script>
 
@@ -72,4 +72,4 @@
 <script src="{{ asset('plugins/sweetalert2/sweetalert2.all.js') }}"></script>
 <script src="{{ asset('plugins/sweetalert2/sweetalert2.js') }}"></script>
 
-<script src="https://kit.fontawesome.com/0d9b9ee5e3.js" crossorigin="anonymous"></script>
+{{-- <script src="https://kit.fontawesome.com/0d9b9ee5e3.js" crossorigin="anonymous"></script> --}}

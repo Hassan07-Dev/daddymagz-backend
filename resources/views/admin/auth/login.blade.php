@@ -94,16 +94,3 @@
         <!-- /.card -->
     </div>
 @endsection
-
-@section('script')
-    <script>
-        $(document).ready(function () {
-            $('#login-btn').removeAttr('disabled');
-            $('#login-btn').html('Log In');
-            $(document).on('click', '#login-btn', function () {
-                $(this).attr('disabled', 'disabled');
-                $(this).html('<div class="spinner-border text-white mr-2 align-self-center loader-sm "></div>');
-            })
-        })
-    </script>
-@endsection

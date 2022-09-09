@@ -36,7 +36,7 @@ class BlogController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'category_id' => 'required',
-            'tag_id'=>'required',
+            // 'tag_id'=>'required',
             'arthur'=>'required',
             'blog_image'=>'required|image',
             'title'=>'required',
@@ -52,7 +52,7 @@ class BlogController extends Controller
             $input = $request->except(['_token']);
             $blog = Blog::create([
                 'category_id' => $request->category_id,
-                'tag_id' => json_encode ($request->tag_id),
+                // 'tag_id' => json_encode ($request->tag_id),
                 'arthur' => $request->arthur,
                 'blog_image' => $image_path['file_path'],
                 'title' => $request->title,
@@ -139,7 +139,7 @@ class BlogController extends Controller
         try{
             $validator = Validator::make($request->all(), [
                 'category_id' => 'required',
-                'tag_id'=>'required',
+                // 'tag_id'=>'required',
                 'arthur'=>'required',
                 'title'=>'required',
                 'description'=>'required',
@@ -176,7 +176,7 @@ class BlogController extends Controller
             }
 
             $data['category_id'] = $request->category_id;
-            $data['tag_id'] = json_encode ($request->tag_id);
+            // $data['tag_id'] = json_encode ($request->tag_id);
             $data['arthur'] = $request->arthur;
             $data['title'] = $request->title;
             $data['description'] = $request->description;

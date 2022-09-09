@@ -101,14 +101,14 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="exampleInputEmail1">Tags</label>
                                 <select class="form-control js-example-basic-multiple" name="tag_id[]" id="tag_id" multiple="multiple">
                                     @foreach($tags as $tag)
                                         <option value="{{ $tag->id }}" data-name="{{ $tag->tag_name }}">{{ $tag->tag_name }}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Blog Title</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1"
@@ -190,7 +190,16 @@
                 ['Other', ['fullscreen', 'codeview']],
             ],
         });
-        $('.js-example-basic-multiple').select2();
+        $('.js-example-basic-multiple').select2({
+            tags: true,
+            createTag: function (params) {
+                return {
+                    id: params.term,
+                    text: params.term,
+                    newOption: true
+                }
+            }
+        });
 
         function getdata() {
             $('#example1').DataTable().clear().destroy();
@@ -370,12 +379,12 @@
                         $('#blog_modal_form input[name="title"]').val(blog.title);
                         $('#description_summernote').summernote('code', blog.description);
                         $('#blog_modal_form select[name="category_id"] option[value="'+blog.category.id+'"]').prop('selected', true);
-                        tags = [];
-                        tag = blog.tag_id;
-                        tag.forEach(function(element) {
-                            tags.push(element.id);
-                        });
-                        $('.js-example-basic-multiple').select2().val(tags).trigger('change');
+                        // tags = [];
+                        // tag = blog.tag_id;
+                        // tag.forEach(function(element) {
+                        //     tags.push(element.id);
+                        // });
+                        // $('.js-example-basic-multiple').select2().val(tags).trigger('change');
                         $('.active_status input[name="status"][value="'+blog.status+'"]').prop('checked', true);
                         $('#blog_modal').modal({
                             backdrop: 'static',

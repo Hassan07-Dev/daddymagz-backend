@@ -17,7 +17,7 @@
                                     <div class="blog-card-media">
                                         <img src="{{ asset('') }}" alt=""/>
                                     </div>
-                                    <div class="blog-card-info">
+                                    <div class="blog-card-info blog-card-height">
                                         <h4 class="title"><a href="blog-details?slug=<?php //echo $blog_data[$val]['slug'] ?>"><?php //echo $blog_data[$val]['title'] ?></a></h4>
                                         <div class="date">
                                             <?php
@@ -37,17 +37,18 @@
                 </div>
                 <div class="col-12">
                     <div class="footer-bottom">
-                        <div class="footer-copy">
-                            <span>©2019. All Rights Reserved.</span>
-                        </div>
                         <div class="footer-logo">
                             <a href="index"><img src="{{ asset('images/dm-logo-3.jpg') }}" alt=""/></a>
+                        </div>
+                        <div class="footer-copy">
+                            <span>©2019. All Rights Reserved.</span>
                         </div>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="https://www.instagram.com/daddy_magz/" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="https://www.linkedin.com/company/daddy-magz/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="https://www.facebook.com/daddymagz" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/daddy_magz" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -394,11 +394,18 @@
                             <li><a href="about-us">About</a></li>
                             <li><a href="contact">Contact</a></li>
                         </ul>
+                        <ul class="social-icon-c">
+                            <li><a href="https://www.facebook.com/daddymagz" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/daddy_magz/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/daddy-magz/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/daddy_magz" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
                         <div class="social-menu">
                             <ul>
-                                <li><a href="https://www.facebook.com/daddymagz"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://www.instagram.com/daddy_magz/"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/daddy-magz/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com/daddymagz" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/daddy_magz/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/daddy-magz/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://twitter.com/daddy_magz" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div>
                     </div>

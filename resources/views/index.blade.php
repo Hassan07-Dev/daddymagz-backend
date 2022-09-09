@@ -84,7 +84,7 @@
 					</div>
 				</div>
             </div> -->
-			<div class="section-full bg-white content-inner-2">
+			<div class="section-full bg-white content-inner-2 content-inner-b0">
                 <div class="container">
                     <div class="row">
 						<div class="col-lg-8 col-md-7 col-sm-12 col-12">

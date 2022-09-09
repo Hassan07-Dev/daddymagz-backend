@@ -647,7 +647,7 @@
 }
 
 .blog-card-media-hieght {
-	height: 638px;
+	height: 450px;
 }
 .blog-card-media>img {
     height: 100%;
@@ -812,9 +812,15 @@
 .footer-copy {
 	max-width:33.33%;
 	flex: 0 0 33.33%;
+	display: flex;
+	align-items: center;
 }
-.footer-logo{
+.footer-copy{
 	text-align:center;
+	justify-content: center;
+}
+.footer-social{
+	justify-content: end;
 }
 .footer-logo img{
 	width:260px;
@@ -1424,7 +1430,10 @@ h2.post-title{
 		text-align: center;
 	}
 	.blog-card-media-hieght {
-		height: 570px;
+		height: 450px;
+	}
+	.footer-social{
+		justify-content: center;
 	}
 }
 @media only screen and (max-width: 576px) {
