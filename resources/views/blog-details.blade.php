@@ -42,114 +42,97 @@
                                         <div class="share-post ml-auto">
                                             <ul class="slide-social">
                                                 <li>Share:</li>
-                                                <li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
+                                                <li><a href="https://api.whatsapp.com/send?text={{ url('blog/details').'/'.$blog_details->slug }}" target="_blank" class="btn-link"><i class="fa fa-whatsapp"></i></a></li>
+                                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ url('blog/details').'/'.$blog_details->slug }}" target="_blank" class="btn-link"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/sharing/share-offsite?mini=true&url={{ url('blog/details').'/'.$blog_details->slug }}" target="_blank" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.instagram.com/?url={{ url('blog/details').'/'.$blog_details->slug }}" target="_blank" class="btn-link"><i class="fa fa-instagram"></i></a></li>
+                                                <li><a href="http://twitter.com/share?text=&url={{ url('blog/details').'/'.$blog_details->slug }}&hashtags=" target="_blank" class="btn-link"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="javascript:void(0);" data-href="{{ url('blog/details').'/'.$blog_details->slug }}" class="btn-link embeded_link"><i class="fa fa-link"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="min-container">
-                               <div class="post-btn">
-								<div class="prev-post">
-									<img src="images/blog/recent-blog/pic2.jpg" alt="" />
-									<h6 class="title"><a href="post-standart">All Time for Christmas and Beyond</a></h6>
-								</div>
-								<div class="next-post">
-									<h6 class="title"><a href="post-standart-alternative">Best Beauty Instagrams of the
-											Week</a></h6>
-									<img src="images/blog/recent-blog/pic1.jpg" alt="" />
-								</div>
-							</div>
-                                <div class="author-box blog-user m-b60">
-								<div class="author-profile-info">
-									<div class="author-profile-pic">
-										<img src="images/testimonials/pic1.jpg" alt="">
-									</div>
-									<div class="author-profile-content">
-										<h6>Kelsey Holmes</h6>
-										<p>Aenean sollicitudin, lorem quis biber idum auctor anisi elit consequat happ
-											quam vel enim augue. Donec efficitur eget ligula mauris eleifend magna.</p>
-										<ul class="list-inline m-b0">
-											<li><a href="javascript:void(0);" class="btn-link"><i
-														class="fa fa-facebook"></i></a></li>
-											<li><a href="javascript:void(0);" class="btn-link"><i
-														class="fa fa-google-plus"></i></a></li>
-											<li><a href="javascript:void(0);" class="btn-link"><i
-														class="fa fa-instagram"></i></a></li>
-											<li><a href="javascript:void(0);" class="btn-link"><i
-														class="fa fa-twitter"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-                                <div class="">
-								<h6 class="widget-title">You Might Also Like</h6>
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-6 col-6">
-										<div class="category-box overlay m-b30">
-											<div class="category-media">
-												<img src="images/category/pic1.jpg" alt="">
-											</div>
-											<div class="category-info">
-												<h6 class="title m-b0"><a href="post-standart">Dress Like a Parisian</a>
-												</h6>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 col-6">
-										<div class="category-box overlay m-b30">
-											<div class="category-media">
-												<img src="images/category/pic2.jpg" alt="">
-											</div>
-											<div class="category-info">
-												<h6 class="title m-b0"><a href="post-standart">Night Look Holiday</a>
-												</h6>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 col-12">
-										<div class="category-box overlay m-b30">
-											<div class="category-media">
-												<img src="images/category/pic3.jpg" alt="">
-											</div>
-											<div class="category-info">
-												<h6 class="title m-b0"><a href="post-standart">The Best Warm
-														Coats</a></h6>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+{{--                               <div class="post-btn">--}}
+{{--                                    <div class="prev-post">--}}
+{{--                                        <img src="images/blog/recent-blog/pic2.jpg" alt="" />--}}
+{{--                                        <h6 class="title"><a href="post-standart">All Time for Christmas and Beyond</a></h6>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="next-post">--}}
+{{--                                        <h6 class="title"><a href="post-standart-alternative">Best Beauty Instagrams of the--}}
+{{--                                                Week</a></h6>--}}
+{{--                                        <img src="images/blog/recent-blog/pic1.jpg" alt="" />--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="author-box blog-user m-b60">--}}
+{{--								<div class="author-profile-info">--}}
+{{--									<div class="author-profile-pic">--}}
+{{--										<img src="images/testimonials/pic1.jpg" alt="">--}}
+{{--									</div>--}}
+{{--									<div class="author-profile-content">--}}
+{{--										<h6>Kelsey Holmes</h6>--}}
+{{--										<p>Aenean sollicitudin, lorem quis biber idum auctor anisi elit consequat happ--}}
+{{--											quam vel enim augue. Donec efficitur eget ligula mauris eleifend magna.</p>--}}
+{{--										<ul class="list-inline m-b0">--}}
+{{--											<li><a href="javascript:void(0);" class="btn-link"><i--}}
+{{--														class="fa fa-facebook"></i></a></li>--}}
+{{--											<li><a href="javascript:void(0);" class="btn-link"><i--}}
+{{--														class="fa fa-google-plus"></i></a></li>--}}
+{{--											<li><a href="javascript:void(0);" class="btn-link"><i--}}
+{{--														class="fa fa-instagram"></i></a></li>--}}
+{{--											<li><a href="javascript:void(0);" class="btn-link"><i--}}
+{{--														class="fa fa-twitter"></i></a></li>--}}
+{{--										</ul>--}}
+{{--									</div>--}}
+{{--								</div>--}}
+{{--							</div>--}}
+{{--                                <div class="">--}}
+                                    {{--								<h6 class="widget-title">You Might Also Like</h6>--}}
+{{--                                    <div class="row">--}}
+{{--                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">--}}
+{{--                                            <div class="category-box overlay m-b30">--}}
+{{--                                                <div class="category-media">--}}
+{{--                                                    <img src="images/category/pic1.jpg" alt="">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="category-info">--}}
+{{--                                                    <h6 class="title m-b0"><a href="post-standart">Dress Like a--}}
+{{--                                                            Parisian</a>--}}
+{{--                                                    </h6>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-lg-4 col-md-4 col-sm-6 col-6">--}}
+{{--                                            <div class="category-box overlay m-b30">--}}
+{{--                                                <div class="category-media">--}}
+{{--                                                    <img src="images/category/pic2.jpg" alt="">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="category-info">--}}
+{{--                                                    <h6 class="title m-b0"><a href="post-standart">Night Look--}}
+{{--                                                            Holiday</a>--}}
+{{--                                                    </h6>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">--}}
+{{--                                            <div class="category-box overlay m-b30">--}}
+{{--                                                <div class="category-media">--}}
+{{--                                                    <img src="images/category/pic3.jpg" alt="">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="category-info">--}}
+{{--                                                    <h6 class="title m-b0"><a href="post-standart">The Best Warm--}}
+{{--                                                            Coats</a></h6>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <div class="clear m-b30" id="comment-list">
                                     <div class="comments-area" id="comments">
-                                        <h6 class="comments-title">8 Comments</h6>
+                                        <h6 class="comments-title" id="comment_count"></h6>
                                         <div>
                                             <ol class="comment-list">
-                                                <li class="comment">
-                                                    <div class="comment-body">
-                                                        <div class="comment-author vcard"> <img class="avatar photo" src="images/testimonials/pic1.jpg" alt=""> <cite class="fn">Kelsey Holmes</cite> <span class="says">says:</span> </div>
-                                                        <div class="comment-meta"> <a href="javascript:void(0);">October 6, 2020 at 7:15 am</a> </div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neqnsectetur adipiscing elit. Nam viae neqnsectetur adipiscing elit.
-                                                            Nam vitae neque vitae sapien malesuada aliquet. </p>
-                                                        <div class="reply"> <a href="javascript:void(0);" class="comment-reply-link">Reply</a> </div>
-                                                    </div>
-                                                    <ol class="children">
-                                                        <li class="comment odd parent">
-                                                            <div class="comment-body">
-                                                                <div class="comment-author vcard"> <img class="avatar photo" src="images/testimonials/pic2.jpg" alt=""> <cite class="fn">Stacy poe</cite> <span class="says">says:</span> </div>
-                                                                <div class="comment-meta"> <a href="javascript:void(0);">October 6, 2020 at 7:15 am</a> </div>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet.
-                                                                    In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis,
-                                                                    ac elementum ligula blandit ac.</p>
-                                                                <div class="reply"> <a href="javascript:void(0);" class="comment-reply-link">Reply</a> </div>
-                                                            </div>
-                                                            <!-- list END -->
-                                                        </li>
-                                                    </ol>
-                                                    <!-- list END -->
-                                                </li>
+
                                             </ol>
                                             <!-- Form -->
                                             <div class="comment-respond" id="respond">
@@ -217,6 +200,7 @@
                     toastr.error(data.message);
                 } else if(data.status == true){
                     var arr = data.data;
+                    $("#comment_count").html(arr.length +" Comments");
                     var value = dataRender(arr);
                     $('.comment-list').html(value);
                 }
@@ -295,6 +279,26 @@
                 var comment_id = $(this).data('id');
                 $("#put_comment_id").val(comment_id);
                 $('html,body').animate({ scrollTop: $('#respond').offset().top}, 1000);
+            });
+
+            $(document).ready(function () {
+                $(document).on('click', '#load_more_btn', function (e) {
+                    e.preventDefault();
+                    page++; //page number increment
+                    load_more(page); //load content
+                });
+
+                $(document).on('click', '.embeded_link', function (e) {
+                    e.preventDefault();
+                    var url_d = $(this).data('href');
+                    navigator.clipboard.writeText(url_d).then(function() {
+                        toastr.success("Copied to clipboard!");
+                        console.log('Async: Copying to clipboard was successful!');
+                    }, function(err) {
+                        toastr.error("Error while copying!");
+                        console.error('Async: Could not copy text: ', err);
+                    });
+                })
             });
         });
     </script>
