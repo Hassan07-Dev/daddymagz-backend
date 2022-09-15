@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\ClientTestimonials;
 use App\Models\Services;
 use Illuminate\Http\Request;
@@ -10,7 +11,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        // $blogs = Blog::where('status', 1)->latest()->limit(5)->get();
-        return view ('index');
+        $categories = BlogCategory::withCount('blog')->orderBy('blog_count', 'desc')->where('status', 1)->get();
+        return view ('index', compact ('categories'));
     }
 }

@@ -40,6 +40,7 @@ class BlogController extends Controller
             'arthur'=>'required',
             'blog_image'=>'required|image',
             'title'=>'required',
+            'excerpt'=>'required',
             'description'=>'required',
         ]);
         if ($validator->fails()) {
@@ -57,6 +58,7 @@ class BlogController extends Controller
                 'blog_image' => $image_path['file_path'],
                 'title' => $request->title,
                 'description' => $request->description,
+                'excerpt' => $request->excerpt,
             ]);
             if ($blog){
                 return sendSuccess ('Created successfully...!!!', null);
@@ -143,7 +145,9 @@ class BlogController extends Controller
                 'arthur'=>'required',
                 'title'=>'required',
                 'description'=>'required',
+                'excerpt'=>'required',
                 'status'=>'required',
+
             ]);
             if ($validator->fails()) {
                 return sendError($validator->messages()->first(), null);
@@ -180,6 +184,7 @@ class BlogController extends Controller
             $data['arthur'] = $request->arthur;
             $data['title'] = $request->title;
             $data['description'] = $request->description;
+            $data['excerpt'] = $request->excerpt;
             $data['status'] = $request->status;
 
             if($blog->update($data)){

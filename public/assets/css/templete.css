@@ -21,8 +21,8 @@
 	margin-bottom:0;
 }
 .news-top .btn {
-	background-color:#6d9ec4;
-	padding:15px 40px; 
+	background-color: #000000;
+	padding:15px 40px;
 }
 .widget-newsletter .form-control::-moz-placeholder {
     color: #2b2d2e;
@@ -45,7 +45,7 @@
 	text-align: center;
 }
 .news-top{
-	background-color:#a7d1f1;
+	background-color:#bf0209;
 	padding:30px 30px;
 	z-index: 3;
 	position: relative;
@@ -86,7 +86,8 @@
 }
 .widget-newsletter .news-back .form-control{
 	margin-bottom: 0;
-	background: #d9eaf8;
+	/*background: #744247;*/
+    border: 1px solid #bf0209;
 	border-radius: 0;
 }
 
@@ -387,7 +388,7 @@
 	position:relative;
 }
 .slide-social{
-	
+
 }
 .partner-bx{
 	color: rgba(255,255,255,0.8);
@@ -565,7 +566,7 @@
 	font-weight:500;
 }
 .blog-card.blog-md .blog-card-info ul {
-	 
+
 }
 .blog-card.blog-md .blog-card-info ul li .btn-link{
 	padding-right:10px;
@@ -761,7 +762,7 @@
 	right: -85px;
 	left:auto;
 }
-.trending-stories.owl-btn-2 .owl-prev, 
+.trending-stories.owl-btn-2 .owl-prev,
 .trending-stories.owl-btn-2 .owl-next{
 	width:45px;
 	height:45px;
@@ -938,7 +939,7 @@ h2.post-title{
 .post-slide .owl-prev:hover{
 	border: 1px solid rgba(255,255,255,1);
 }
-.post-slide1.owl-btn-center-lr .owl-nav .owl-prev, 
+.post-slide1.owl-btn-center-lr .owl-nav .owl-prev,
 .post-slide1.owl-btn-center-lr .owl-nav .owl-next{
 	margin: 0 30px;
 }
@@ -1172,7 +1173,7 @@ h2.post-title{
 	.blog-user .author-profile-pic{
 		margin: 0;
 	}
-	.prev-post img, 
+	.prev-post img,
 	.next-post img {
 		height: 50px;
 		width: 55px;
@@ -1316,14 +1317,14 @@ h2.post-title{
 	.blog-card.overlay .blog-card-info{
 		padding: 15px 20px;
 	}
-	
+
 	.footer-title {
 		margin-bottom: 15px;
 	}
 	.footer-title span {
 		font-size: 15px;
 	}
-	.footer-title span:after, 
+	.footer-title span:after,
 	.footer-title span:before{
 		left: -55px;
 		top: 7px;
@@ -1408,7 +1409,7 @@ h2.post-title{
 		top: auto;
 		bottom: 45px;
 	}
-	.post-slide1.owl-btn-center-lr .owl-nav .owl-prev, 
+	.post-slide1.owl-btn-center-lr .owl-nav .owl-prev,
 	.post-slide1.owl-btn-center-lr .owl-nav .owl-next{
 		width: 25px;
 		height: 25px;
@@ -1437,7 +1438,7 @@ h2.post-title{
 	}
 }
 @media only screen and (max-width: 576px) {
-	.gallery-alt .post-slide .owl-next, 
+	.gallery-alt .post-slide .owl-next,
 	.gallery-alt .post-slide .owl-prev{
 		margin: 0 15px;
 	}

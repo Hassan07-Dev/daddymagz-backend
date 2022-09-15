@@ -21,6 +21,10 @@
 <script src='https://www.google.com/recaptcha/api.js'></script> <!-- Google API For Recaptcha  -->
 <script src="{{ asset('assets/js/dz.ajax.js') }}"></script><!-- CONTACT JS  -->
 <script src="{{ asset('assets/js/map.script.js') }}"></script><!-- CONTACT JS  -->
+<script src="{{ asset('plugins/axios.min.js') }}"></script>
+<script src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+<script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
+<script src="{{ asset('assets/js/moment.min.js') }}"></script><!-- CONTACT JS  -->
 
 </body>
 

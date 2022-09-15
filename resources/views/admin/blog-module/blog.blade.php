@@ -31,7 +31,7 @@
                                 <th>Sr. No</th>
                                 <th>Blog Title</th>
                                 <th>Category</th>
-                                <th>Tag List</th>
+                                {{-- <th>Tag List</th> --}}
                                 <th>Arthur</th>
                                 <th>Blog Image</th>
                                 <th>Description</th>
@@ -63,7 +63,7 @@
                                 <th>Sr. No</th>
                                 <th>Blog Title</th>
                                 <th>Category</th>
-                                <th>Tag List</th>
+                                {{-- <th>Tag List</th> --}}
                                 <th>Arthur</th>
                                 <th>Blog Image</th>
                                 <th>Description</th>
@@ -211,19 +211,19 @@
                     {data: 'DT_RowIndex', name: 'DT_RowIndex'},
                     {data: 'title', name: 'title'},
                     {data: 'category.category_name', name: 'category.category_name'},
-                    {
-                        data: 'tag_id',
-                        name: 'tag_id',
-                        render: function (data, type, full, meta) {
-                            // console.log(data);
-                            let output = '';
-                            data.forEach(function(element) {
-                                output+='<button type="button" data-id="'+element.id+'" class="btn btn-outline-secondary btn-sm disabled">'+element.tag_name+'</button>';
-                            });
-                            return output;
-                        },
-                        searchable: true
-                    },
+                    // {
+                    //     data: 'tag_id',
+                    //     name: 'tag_id',
+                    //     render: function (data, type, full, meta) {
+                    //         // console.log(data);
+                    //         let output = '';
+                    //         data.forEach(function(element) {
+                    //             output+='<button type="button" data-id="'+element.id+'" class="btn btn-outline-secondary btn-sm disabled">'+element.tag_name+'</button>';
+                    //         });
+                    //         return output;
+                    //     },
+                    //     searchable: true
+                    // },
                     {data: 'arthur', name: 'arthur'},
                     {
                         data: 'blog_image',
@@ -281,29 +281,33 @@
 
             $(document).on('submit', 'form#blog_modal_form', function (e) {
                 e.preventDefault();
-                var form = this;
-                axios.post($(form).attr('action'),
-                    new FormData(form),
+                var formdata = new FormData(this);
+                var desc = $($('#description_summernote').summernote("code")).text();
+                desc = $.trim(desc.slice(0, 140));
+
+                formdata.append("excerpt", desc.replaceAll('"', ''));
+                axios.post($(this).attr('action'),
+                    formdata,
                     buttonDisable('submit_btn')
                 )
-                    .then(function (response) {
-                        data = response.data;
-                        if(data.status == false){
-                            toastr.error(data.message);
-                        } else if(data.status == true){
-                            getdata();
-                            $('#blog_modal').modal('hide');
-                            toastr.success(data.message);
+                .then(function (response) {
+                    data = response.data;
+                    if(data.status == false){
+                        toastr.error(data.message);
+                    } else if(data.status == true){
+                        getdata();
+                        $('#blog_modal').modal('hide');
+                        toastr.success(data.message);
 
-                        }
+                    }
+                    buttonEnabled('submit_btn', 'Add Blog');
+                })
+                .catch(function (error) {
+                    if (error.response.data.status == false) {
                         buttonEnabled('submit_btn', 'Add Blog');
-                    })
-                    .catch(function (error) {
-                        if (error.response.data.status == false) {
-                            buttonEnabled('submit_btn', 'Add Blog');
-                            toastr.error(error.response.data.message);
-                        }
-                    });
+                        toastr.error(error.response.data.message);
+                    }
+                });
             });
 
             $(document).on('click', 'a#delete_data', function (e) {

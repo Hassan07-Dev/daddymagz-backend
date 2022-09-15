@@ -6,7 +6,9 @@
                 <div class="header-content-bx">
                     <!-- website logo -->
                     <div class="logo-header">
-                        <a href="index"><img src="{{ asset('images/dm-logo-3.jpg') }}" alt=""/></a>
+                        @isset($logo)
+                            <a href="{{ route ('home.index') }}"><img src="{{ asset ($logo->logo_image) }}" alt=""/></a>
+                        @endisset
                     </div>
                     <!-- nav toggle button -->
                     <button class="navbar-toggler collapsed navicon justify-content-end kk" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,9 +33,9 @@
                     </div>
                     <!-- main nav -->
                     <div class="header-nav navbar-collapse collapse justify-content-center nav-dark" id="navbarNavDropdown">
-                        <ul class="nav navbar-nav">	
+                        <ul class="nav navbar-nav">
                             <li class="active">
-                                <a href="index">Home</a>
+                                <a href="{{ route ('home.index') }}">Home</a>
                                 <!-- <ul class="sub-menu">
                                     <li><a href="index">Home 01</a></li>
                                     <li><a href="index-2">Home 02</a></li>
@@ -391,8 +393,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="about-us">About</a></li>
-                            <li><a href="contact">Contact</a></li>
+                            <li><a href="{{ route ('about.index') }}">About</a></li>
+                            <li><a href="{{ route ('contactUs.index') }}">Contact</a></li>
                         </ul>
                         <ul class="social-icon-c">
                             <li><a href="https://www.facebook.com/daddymagz" target="_blank"><i class="fa fa-facebook"></i></a></li>

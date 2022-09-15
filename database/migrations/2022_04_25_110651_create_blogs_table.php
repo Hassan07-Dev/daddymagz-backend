@@ -23,6 +23,7 @@ class CreateBlogsTable extends Migration
             $table->text ('title')->nullable ();
             $table->string ('slug')->unique()->nullable ();
             $table->longText ('description')->nullable ();
+            $table->longText ('excerpt')->nullable ();
             $table->boolean ('status')->default (true)->nullable ();
             $table->timestamps();
         });

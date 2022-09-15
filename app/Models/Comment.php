@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Faq extends Model
+class Comment extends Model
 {
     use HasFactory;
 
-    protected $table = 'faqs';
+    public function commentReplies(){
+        return $this->hasMany(Self::class,'comment_id','id');
 
-    protected $fillable = ['faq_question', 'faq_answer', 'type', 'status'];
+    }
 }

@@ -10,26 +10,22 @@
 				<div class="col-lg-12">
 					<div class="post-standart no-radius m-b0">
 						<div class="post-slide2 owl-carousel owl-none">
-							 <?php
-								//foreach($json_data as $key => $category){
-							?>
-								{{-- <div class="item">
+                            @foreach($categories as $key => $category)
+								<div class="item">
 									<div class="blog-card overlay">
 										<div class="blog-card-media blog-card-media-hieght">
-											<img src="<?php //echo PATH; ?>images/category/<?php //echo $category['image'] ?>" alt="">
+											<img src="{{ asset($category['category_image']) }}" alt="">
 										</div>
 										<div class="blog-card-info">
-											<h2 class="title"><a href="#" data-id=""><?php //echo $category['category_name'] ?></a></h2>
+											<h2 class="title"><a href="#" data-id="">{{ $category['category_name'] }}</a></h2>
 											<!-- <div class="date">
 												29 <span></span> 2022
 											</div> -->
 											<a href="#" class="btn-link readmore" data-id=""><i class="la la-arrow-right"></i></a>
 										</div>
 									</div>
-								</div> --}}
-							<?php
-								//}
-							?> 
+								</div>
+                            @endforeach
 						</div>
 					</div>
 				</div>
@@ -89,140 +85,19 @@
                     <div class="row">
 						<div class="col-lg-8 col-md-7 col-sm-12 col-12">
 							<div class="row loadmore-content">
-								<?php
-									//foreach($blog_data as $key => $blog_parse){
-								?>
-									{{-- <div class="col-lg-12">
-										<div class="blog-card blog-md">
-											<div class="blog-card-media blog-border-radius">
-												<img src="<?php //echo PATH; ?><?php// echo $blog_parse['featured_image'] ?>" alt=""/>
-											</div>
-											<div class="blog-card-info">
-												<h4 class="title"><a href="blog-details?slug=<?php// echo $blog_parse['slug'] ?>"><?php //echo $blog_parse['title'] ?></a></h4>
-												<div class="date">
-													<?php
-														// $time_input = strtotime($blog_parse['date_publish']); 
-														// $date_input = getDate($time_input); 
-													?>
-													<?php //echo $date_input['mday']; ?><span></span><?php //echo $date_input['mon']; ?> <span></span> <?php //echo $date_input['year']; ?>
-												</div>
-												<p><?php //echo substr($blog_parse['excerpt'],0,140) ?>...</p>
-												<ul class="list-inline m-b0">
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-facebook"></i></a></li>
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-twitter"></i></a></li>
-												</ul>
-												<a href="blog-details?slug=<?php //echo $blog_parse['slug'] ?>" class="btn-link readmore"><i class="la la-arrow-right"></i></a>
-											</div>
-										</div>
-									</div> --}}
-								<?php
-									//}
-								?>
+
 							</div>
 							<div class="row">
 								<div class="col-lg-12 m-t10">
 									<div class="text-center m-b30">
-										<a href="#" rel="#" class="btn black radius-xl loadmore-btn">Load More</a>
+										<a href="javascript:;" rel="#" id="load_more_btn" class="btn black radius-xl loadmore-btn">Load More</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-5 col-sm-12 col-12">
 							<div class="side-bar p-l30 sticky-top">
-								<!-- <div class="widget widget-author">
-									<h6 class="widget-title">About Me</h6>
-									<div class="author-blog">
-										<div class="author-profile-info">
-											<div class="author-profile-pic">
-												<img src="images/testimonials/pic1.jpg" alt="">
-											</div>
-											<div class="author-profile-content">
-												<p>Fusce id mauris auctor, sollicitudin amet gravida hendrerit risus. </p>
-												<ul class="list-inline m-b0">
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-facebook"></i></a></li>
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-instagram"></i></a></li>
-													<li><a href="javascript:void(0);" class="btn-link"><i class="fa fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>	
-								</div> -->
-								<div class="widget widget-newsletter">
-									<div class="news-box text-white text-center">
-										<form class="dzSubscribe dezPlaceAni" action="script/mailchamp.php" method="post">
-											<img src="images/newslatter-bg.png" alt=""/>
-											<div class="news-back">
-												<h6>Newsletter</h6>
-												<input name="dzEmail" required="required" type="email" class="form-control" placeholder="Your Email Address">
-											</div>
-											<div class="news-top">
-												<img src="images/icon/newslatter.png" class="m-b20" alt=""/>
-												<p>Enter your email address below to subscribe to my newsletter</p>
-												<button name="submit" value="Submit" type="submit" class="btn radius-xl">SUBSCRIBE</button>
-												<div class="dzSubscribeMsg"></div>
-											</div>
-										</form>
-									</div>
-								</div>
-								<!-- <div class="widget widget-stories">
-									<h6 class="widget-title">Latest Stories</h6>
-									<div class="blog-card blog-grid">
-										<div class="blog-card-media">
-											<img src="images/blog/grid/pic1.jpg" alt="">
-										</div>
-										<div class="blog-card-info">
-											<h5 class="title"><a href="post-standart">Christmas Is on Year-Round</a></h5>
-										</div>
-									</div>
-								</div> -->
-								<div class="widget widget_categories">
-									<h6 class="widget-title">Category</h6>
-									<ul>
-										<li><a href="javascript:void(0);">Beauty <span></span></a> 6</li>
-										<li><a href="javascript:void(0);">Travel <span></span></a> 9 </li>
-										<li><a href="javascript:void(0);">Fashion <span></span></a> 3 </li>
-										<li><a href="javascript:void(0);">Style <span></span></a> 5 </li>
-										<li><a href="javascript:void(0);">Other <span></span></a> 7 </li>
-									</ul>
-								</div>
-								<!-- <div class="widget recent-posts-entry">
-									<h5 class="widget-title">Featured Posts</h5>
-									<div class="widget-post-bx">
-										<div class="widget-post clearfix">
-											<div class="dlab-post-media">
-												<img src="images/blog/recent-blog/pic2.jpg" alt="" width="200" height="143">
-											</div>
-											<div class="dlab-post-info">
-												<div class="dlab-post-header">
-													<h6 class="post-title"><a href="post-standart-alternative">Romantic Weekend From New York City</a></h6>
-												</div>
-											</div>
-										</div>
-										<div class="widget-post clearfix">
-											<div class="dlab-post-media">
-												<img src="images/blog/recent-blog/pic3.jpg" alt="" width="200" height="143">
-											</div>
-											<div class="dlab-post-info">
-												<div class="dlab-post-header">
-													<h6 class="post-title"><a href="post-standart">Sincerely Jules x Revolve Beauty Box</a></h6>
-												</div>
-											</div>
-										</div>
-										<div class="widget-post clearfix">
-											<div class="dlab-post-media">
-												<img src="images/blog/recent-blog/pic4.jpg" alt="" width="200" height="143">
-											</div>
-											<div class="dlab-post-info">
-												<div class="dlab-post-header">
-													<h6 class="post-title"><a href="post-standart">Meet the New Generation of Red Carpet Stars</a></h6>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div> -->
-								<div class="clearfix"></div>
+                                <x-right-sidebar />
 							</div>
 						</div>
 					</div>
@@ -233,4 +108,98 @@
 		<!-- contact area END -->
     </div>
     <!-- Content END-->
+@endsection
+
+@section('script')
+    <script>
+        var imageUrl = "@php env ('IMAGE_URL') @endphp"
+        var SITEURL = "{{ route('blog_list') }}";
+        var page = 1; //track user scroll as page number, right now page number is 1
+        load_more(page);
+
+        function load_more(page){
+            axios.post(SITEURL, {
+                page_no:page,
+            })
+            .then(function (response) {
+                console.log(response.data);
+                data = response.data;
+                if(data.status == false){
+                    toastr.error(data.message);
+                } else if(data.status == true){
+                    var arr = data.data;
+                    var value = dataRender(arr);
+                    $('.loadmore-content').append(value);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+                if (error.response.data.status == false) {
+                    toastr.error(error.response.data.message);
+                }
+            });
+        }
+
+        function truncate(str, no_words) {
+            return str.split(" ").splice(0,no_words).join(" ");
+        }
+        function countWords(str) {
+            str = str.replace(/(^\s*)|(\s*$)/gi,"");
+            str = str.replace(/[ ]{2,}/gi," ");
+            str = str.replace(/\n /,"\n");
+            return str.split(' ').length;
+        }
+
+        function dataRender(res) {
+            var output = '';
+            res.forEach(function(element){
+                var url_encode = "{{ url ('blog/details') }}/"+element.slug;
+                url_encode = encodeURI(url_encode);
+                output += '<div class="col-lg-12">'
+                    +'<div class="blog-card blog-md">'
+                    +'<div class="blog-card-media blog-border-radius">'
+                    +'<img src="'+imageUrl+element.blog_image+'" alt=""/>'
+                    +'</div>'
+                    +'<div class="blog-card-info">'
+                    +'<h4 class="title"><a href="{{ url ('blog/details') }}/'+element.slug+'">'+element.title+'</a></h4>'
+                    +'<div class="date">'+moment(element.created_at).format('DD')+'<span></span>'+moment(element.created_at).format('MM')+'<span></span>'+moment(element.created_at).format('YYYY')
+                    +'</div>'
+                    +'<p>'+element.excerpt+'...</p>'
+                    +'<ul class="list-inline m-b0 icon_c">'
+                        +'<li><a href="https://api.whatsapp.com/send?text='+url_encode+'" target="_blank" class="btn-link"><i class="fa fa-whatsapp"></i></a></li>'
+                        +'<li><a href="https://www.facebook.com/sharer/sharer.php?u='+url_encode+'" target="_blank" class="btn-link"><i class="fa fa-facebook"></i></a></li>'
+                        +'<li><a href="https://www.linkedin.com/sharing/share-offsite?mini=true&url='+url_encode+'" target="_blank" class="btn-link"><i class="fa fa-linkedin"></i></a></li>'
+                        +'<li><a href="https://www.instagram.com/?url='+url_encode+'" target="_blank" class="btn-link"><i class="fa fa-instagram"></i></a></li>'
+                        +'<li><a href="http://twitter.com/share?text=&url='+url_encode+'&hashtags=" target="_blank" class="btn-link"><i class="fa fa-twitter"></i></a></li>'
+                        +'<li><a href="javascript:void(0);" data-href="'+url_encode+'" class="btn-link embeded_link"><i class="fa fa-link"></i></a></li>'
+                    +'</ul>'
+                    +'<a href="{{ url ('blog/details') }}/'+element.slug+'" class="btn-link readmore"><i class="la la-arrow-right"></i></a>'
+                    +'</div>'
+                    +'</div>'
+                    +'</div>';
+            });
+            return output;
+        }
+
+        $(document).ready(function () {
+            $(document).on('click', '#load_more_btn', function (e) {
+                e.preventDefault();
+                page++; //page number increment
+                load_more(page); //load content
+            });
+
+            $(document).on('click', '.embeded_link', function (e) {
+                e.preventDefault();
+                var url_d = $(this).data('href');
+                navigator.clipboard.writeText(url_d).then(function() {
+                    toastr.success("Copied to clipboard!");
+                    console.log('Async: Copying to clipboard was successful!');
+                }, function(err) {
+                    toastr.error("Error while copying!");
+                    console.error('Async: Could not copy text: ', err);
+                });
+            })
+        });
+
+    </script>
 @endsection
