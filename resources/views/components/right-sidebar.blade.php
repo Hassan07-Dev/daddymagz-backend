@@ -55,11 +55,13 @@
 <div class="widget widget_categories">
     <h6 class="widget-title">Category</h6>
     <ul>
+        <li><a href="javascript:void(0);" data-val="0" class="filter_base">All <span></span></a>
+            </li>
         @foreach($categories as $countData)
-            @if($loop->iteration <= 5)
-                <li><a href="javascript:void(0);">{{ $countData->category_name }} <span></span></a>
+{{--            @if($loop->iteration <= 5)--}}
+                <li><a href="javascript:void(0);" data-val="{{ $countData->id }}" class="filter_base">{{ $countData->category_name }} <span></span></a>
                     {{ $countData->blog_count }}</li>
-            @endif
+{{--            @endif--}}
         @endforeach
     </ul>
 </div>

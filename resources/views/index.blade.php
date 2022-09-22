@@ -17,11 +17,11 @@
 											<img src="{{ asset($category['category_image']) }}" alt="">
 										</div>
 										<div class="blog-card-info">
-											<h2 class="title"><a href="#" data-id="">{{ $category['category_name'] }}</a></h2>
+											<h2 class="title"><a href="javascript:;" data-val="{{ $category->id }}" class="filter_base">{{ $category['category_name'] }}</a></h2>
 											<!-- <div class="date">
 												29 <span></span> 2022
 											</div> -->
-											<a href="#" class="btn-link readmore" data-id=""><i class="la la-arrow-right"></i></a>
+											<a href="javascript:;" data-val="{{ $category->id }}" class="btn-link readmore filter_base" data-id=""><i class="la la-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -87,6 +87,9 @@
 							<div class="row loadmore-content">
 
 							</div>
+                            <div class="row d-none" id="no_data">
+                                <span class="text-danger">*No more record found.</span>
+                            </div>
 							<div class="row">
 								<div class="col-lg-12 m-t10">
 									<div class="text-center m-b30">
@@ -117,9 +120,10 @@
         var page = 1; //track user scroll as page number, right now page number is 1
         load_more(page);
 
-        function load_more(page){
+        function load_more(page, category = null){
             axios.post(SITEURL, {
                 page_no:page,
+                category:category
             })
             .then(function (response) {
                 console.log(response.data);
@@ -128,8 +132,13 @@
                     toastr.error(data.message);
                 } else if(data.status == true){
                     var arr = data.data;
-                    var value = dataRender(arr);
-                    $('.loadmore-content').append(value);
+                    if(arr.length>0){
+                        var value = dataRender(arr);
+                        $('.loadmore-content').append(value);
+                    } else {
+                        $('#load_more_btn').css('display', 'none');
+                        $('#no_data').removeClass('d-none');
+                    }
                 }
             })
             .catch(function (error) {
@@ -186,6 +195,21 @@
                 e.preventDefault();
                 page++; //page number increment
                 load_more(page); //load content
+            });
+
+            $(document).on('click', '.filter_base', function (e) {
+                e.preventDefault();
+                loader();
+                var category = $(this).data('val');
+                $('.loadmore-content').html('');
+                $('#load_more_btn').css('display', 'none');
+                $('#no_data').addClass('d-none');
+                if(category == 0){
+                    $('#load_more_btn').css('display', '');
+                    category = null;
+                }
+                load_more(page, category);
+                closeLoader();
             });
 
             $(document).on('click', '.embeded_link', function (e) {

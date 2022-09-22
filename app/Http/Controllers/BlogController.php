@@ -37,12 +37,16 @@ class BlogController extends Controller
 
 //            dd ($inner_number_recent.'---'.$inner_take);
 
-            $blogs = Blog::where('status', 1) ->skip($inner_number_recent)->take($inner_take)->get();
+            $blogs = Blog::where('status', 1)
+                ->when($request->category, function ($q) use ($request){
+                    $q->where('category_id', $request->category);
+                })->skip($inner_number_recent)->take($inner_take)->get();
             if($blogs){
                 return sendSuccess ('Data found!', $blogs);
             }
             return sendError ('No blog found!', null);
         } catch (\Exception $e){
+            return $e;
             return sendError ('Something went wrong!', $e);
         }
     }

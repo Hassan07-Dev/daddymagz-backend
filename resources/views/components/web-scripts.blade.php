@@ -26,6 +26,9 @@
 <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
 <script src="{{ asset('assets/js/moment.min.js') }}"></script><!-- CONTACT JS  -->
 
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.all.js') }}"></script>
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.js') }}"></script>
+
 </body>
 
 </html>

@@ -35,6 +35,7 @@ Route::get('/adminseeder', function(){
 
 Route::controller (HomeController::class)->group (function (){
     Route::get ('/', 'index')->name ('home.index');
+    Route::post ('/contact', 'contactForm')->name ('home.contact');
 });
 
 Route::prefix('services')->group(function () {
