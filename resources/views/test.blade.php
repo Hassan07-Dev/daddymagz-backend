@@ -688,6 +688,185 @@
             </code>
     </pre>
 
+    <pre>
+        <code>
+            ----------------------------Github & Gitlab--------------------------
+
+            --> "generate ssh-key"
+
+            ssh-keygen -t ed25519 -C "<comment>"
+
+            --> "config username & email to git"
+
+            git config --global user.name ""
+            git config --global user.email ""
+
+            --> "check the list of credentials given in the git"
+
+            git config --global --list
+
+            -->"First Create Branch of your own name"
+
+            git checkout -b branch-name
+
+            -->"To Push Commit"
+
+            git add .
+            git commit -am "comment"
+            git push origin hassan
+
+            -->"Stash all local changes"
+
+            git stash
+            git reset --hard --- discard everything permanently
+            git stash list --- list your stashed changes.
+            git stash show --- see what n is in the below commands.
+            git stash apply --- apply the most recent stash.
+            git stash apply stash@{n} --- apply an older stash.
+
+            -->"Revert the stashed changes from local"
+
+            git stash apply --index
+
+        </code>
+
+        <code>
+            <span style="font-size: 22px;font-weight: bold">React JS</span>
+
+                --> Topic Name --- "Exports & Imports (Module)"
+
+
+                -------------------------- React Js --------------------------------
+
+                --> ES6 Topics
+
+                --> Topic Name --- "Let vs Constant"
+
+                 let value = "qwerty"            //output  qwerty
+                 let value = "qwerty1"          //output  qwerty1
+
+                 const value = "qwerty"            //output  qwerty
+                 const value = "qwerty1"          //output  qwerty     through error cause value can't be change
+
+
+                --> Topic Name --- "Arrow Function"
+
+                const functionName = (Param1, Param2, ......) => {    //function defination    }
+
+                You  May user inline arrow function
+
+                const functionName = (Param) => console.log(Param);
+
+
+                --> Classes, Properties, & Methods --- ""
+
+                class Human{
+                  constructor(){
+                    this.gender = "male";
+                  }
+
+                  printGender(){
+                    console.log(this.gender);
+                  }
+                }
+
+
+                class Person extends Human{
+                  constructor(){
+                    super();
+                    this.name = "Max";
+                    this.gender = "female";
+                  }
+
+                  printMyName(){
+                    console.log(this.name);
+                  }
+                }
+
+                const person = new Person();
+                person.printMyName();
+                person.printGender();
+
+                Using Arrow Functions
+
+                class Human{
+                  gender = "male";
+                  printGender = () => console.log(this.gender);
+                }
+
+                class Person extends Human{
+                  name = "Max";
+                  gender = "female";
+                  printMyName = () => console.log(this.name);
+                }
+
+                const person = new Person();
+                person.printMyName();
+                person.printGender();
+
+
+                --> spread & rest Operator --- ""
+
+                //Spread operator
+                const number = [1, 2, 3];
+                const newNumber = [...number, 4];
+
+                console.log(newNumber);  // Output [1, 2, 3, 4]
+
+                //Rest Operator
+                const filter = (...args) => {
+                  return args.filter(el => el === 1);
+                }
+
+                console.log(filter(1, 2, 3));
+
+
+                --> Destructuring --- ""
+
+                const number = [1, 2, 3];
+                [num1, num2] = number;
+                console.log(num1,num2); //"1------2"
+
+                [num1, , num2] = number;
+                console.log(num1,num2); //"1------3"
+
+
+                -->Array Refferences --- ""
+
+                const number = [1, 2, 3];
+
+                const doubleArray = number.map((num)=>{
+                  return num * 2;
+                });
+
+
+                console.log(number);    //[1, 2, 3]
+                console.log(doubleArray);   //[2, 4, 6]
+
+
+
+
+
+
+
+
+
+
+                -------------- React Start -------------------
+
+                How to install React
+
+                npm install -g create-react-app      //it will install react globaly no need to run this commant every time.
+                create-react-app projectName
+                npm start   //start the
+
+                If you find Plugin "react" was conflicted between "package.json » eslint-config-react-app this type of error use following coomand
+
+                npm remove eslint-config-react-app
+                npm add eslint-config-react-app@6
+        </code>
+    </pre>
+
 
 </span>
 
