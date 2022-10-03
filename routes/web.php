@@ -76,3 +76,8 @@ Route::controller (CommentController::class)->group (function (){
     Route::post ('/add_comments', 'index')->name ('add_comments.index');
     Route::post ('/comments/list', 'show')->name ('comments.list');
 });
+
+
+Route::controller (HomeController::class)->group (function (){
+    Route::get ('/test/data', 'test')->name ('test.data');
+});

@@ -43,4 +43,9 @@ class HomeController extends Controller
             return $e;
         }
     }
+
+    public function test (Request $request)
+    {
+        return view ('test');
+    }
 }
